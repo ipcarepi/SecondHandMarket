@@ -1,0 +1,39 @@
+# Git 협업 가이드 🚀
+
+## 브랜치 전략
+- `main`: 최종 안정 버전
+- `develop`: 기능 통합 테스트용
+- `feature/*`: 기능별 브랜치 (ex. `feature/login`)
+
+## 브랜치 생성 및 병합
+```bash
+# 브랜치 생성
+git checkout -b develop
+
+# 기능 브랜치 생성
+git checkout -b feature/login develop
+
+# 커밋
+git status
+git add .
+git commit -m "기능 설명 또는 메모"
+git push origin develop
+
+# 원격 저장소에 푸시
+git push origin 브랜치 이름/거기 디렉토리
+
+# 내 main으로 이동해서 병합
+git checkout main
+git merge develop
+git push origin main
+
+# develop 브랜치로 다시 돌아오기
+git checkout develop
+
+# 최신 정보 가져오기
+git fetch upstream
+
+# 팀의 main을 내 main에 병합 형이 작업한거 가져오기.
+git checkout main
+git merge upstream/main
+git push origin main  # 내 GitHub 저장소에도 반영
