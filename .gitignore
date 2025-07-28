@@ -38,3 +38,5 @@ out/
 
 # 크롤링 코드는 GitHub에 업로드하지 않음
 crowling/
+
+docs/

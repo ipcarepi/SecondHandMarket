@@ -14,24 +14,26 @@ git checkout -b develop
 git checkout -b feature/login develop
 
 # 커밋
-git add .
-git commit -m "feat: 로그인 기능 추가"
-
-# 원격 저장소에 푸시
-git push origin feature/login
-
-# PR: feature → develop → main
-
-# 현재 develop 브랜치에서 문서 작업 완료
 git status
 git add .
-git commit -m "docs: 프로젝트 문서 추가"
+git commit -m "기능 설명 또는 메모"
 git push origin develop
 
-# main으로 이동해서 병합
+# 원격 저장소에 푸시
+git push origin 브랜치 이름/거기 디렉토리
+
+# 내 main으로 이동해서 병합
 git checkout main
 git merge develop
 git push origin main
 
 # develop 브랜치로 다시 돌아오기
 git checkout develop
+
+# 최신 정보 가져오기
+git fetch upstream
+
+# 팀의 main을 내 main에 병합 형이 작업한거 가져오기.
+git checkout main
+git merge upstream/main
+git push origin main  # 내 GitHub 저장소에도 반영
