@@ -17,12 +17,13 @@ git checkout -b feature/login develop
 git status
 git add .
 git commit -m "기능 설명 또는 메모"
-git push origin develop
+git push origin develop # 내 github develop 에 push
+git push upstream develop # 형 github에 push
 
 # 원격 저장소에 푸시
 git push origin 브랜치 이름/거기 디렉토리
 
-# 내 main으로 이동해서 병합
+# 내 main에 추가하기 develop이랑 합치기
 git checkout main
 git merge develop
 git push origin main
