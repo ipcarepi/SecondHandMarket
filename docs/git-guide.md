@@ -38,7 +38,8 @@ git fetch upstream
 
 # 1. 원격 저장소 최신 상태 가져오기
 git fetch upstream
-# 2. 팀의 main을 내 main에 병합 형이 작업한거 가져오기.
+# 2. git merge upstream/main --no-edit
+팀의 main을 내 main에 병합 형이 작업한거 가져오기.
 git checkout main
 git merge upstream/main
 git push origin main  # 내 GitHub 저장소에도 반영
