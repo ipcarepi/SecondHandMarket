@@ -18,6 +18,6 @@
 ## 📄 문서 모음
 - [Git 사용법 및 브랜치 전략](docs/git-guide.md)
 - [API 명세서](docs/api-spec.md)
-- [ERD](docs/erd.png)
+- [ERD](First_ERD.png)
 
 ---
