@@ -6,9 +6,9 @@ Controller	클라이언트로부터 HTTP 요청 받아서 Service에 전달, 결
 DTO는 계층 간 데이터를 주고받을 때 사용하는 "데이터용 객체
 
 mysql -u root -p
-DESC product;
 use secondhand;
 SHOW TABLES;
 SHOW DATABASES;
 SELECT * FROM PRODUCT;
 DELETE FROM product;
+DESC product;
