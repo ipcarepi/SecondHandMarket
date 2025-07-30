@@ -21,11 +21,7 @@ public class SecondHandMarketApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Product product = new Product("나이키 덩크 로우", null, 139000,
-                139000, 139000, "black", "nike dunk low", "delivery");
-        productRepository.save(product);
-
         productRepository.findAll().forEach(p ->
-                System.out.println("🟢 상품명: " + p.getName() + ", 가격: " + p.getLast_trade_price()));
+                System.out.println("🟢 상품명: " + p.getName() + ", 가격: " + p.getCurrent_price()));
     }
 }
