@@ -1,5 +1,7 @@
 package com.sc.secondHandMarket.domain.transaction.entity;
 
+import com.sc.secondHandMarket.domain.product.entity.Product;
+import com.sc.secondHandMarket.domain.user.entity.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -14,21 +16,24 @@ public class Transaction {
     private Long id;
 
     @ManyToOne(fetch= LAZY)
-    private Long buyer_id;
+    @JoinColumn(name = "buyer_id")
+    private User buyer;
     @ManyToOne(fetch= LAZY)
-    private Long seller_id;
+    @JoinColumn(name = "seller_id")
+    private User seller;
     @ManyToOne(fetch= LAZY)
-    private Long product_id;
+    @JoinColumn(name = "product_id")
+    private Product product;
 
 //    private Long size_option_id;
 
     private int price;
     private LocalDateTime traded_at;
 
-    public Transaction(Long buyer_id, Long seller_id, Long product_id, int price) {
-        this.buyer_id = buyer_id;
-        this.seller_id = seller_id;
-        this.product_id = product_id;
+    public Transaction(User buyer, User seller, Product product, int price) {
+        this.buyer = buyer;
+        this.seller = seller;
+        this.product = product;
         this.price = price;
         this.traded_at = LocalDateTime.now();
     }

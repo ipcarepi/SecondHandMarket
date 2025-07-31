@@ -1,5 +1,7 @@
 package com.sc.secondHandMarket.domain.sale.entity;
 
+import com.sc.secondHandMarket.domain.product.entity.Product;
+import com.sc.secondHandMarket.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
@@ -15,9 +17,11 @@ public class Sale {
     private Long id;
 
     @ManyToOne(fetch= LAZY)
-    private Long user_id;
+    @JoinColumn(name = "user_id")
+    private User user;
     @ManyToOne(fetch = LAZY)
-    private Long product_id;
+    @JoinColumn(name = "product_id")
+    private Product product;
 
 //    private Long size_option_id;
 
@@ -25,9 +29,9 @@ public class Sale {
     private String status;
     private LocalDateTime created_at;
 
-    public Sale(Long user_id, Long product_id, int price, String status) {
-        this.user_id = user_id;
-        this.product_id = product_id;
+    public Sale(User user, Product product, int price, String status) {
+        this.user = user;
+        this.product = product;
         this.price = price;
         this.status = status;
         this.created_at = LocalDateTime.now();
