@@ -56,7 +56,7 @@ def main():
             else:
                 count_fail += 1
         except Exception as e:
-            print(f"❌ 업로드 실패: {filename} → {e}")
+            print(f"업로드 실패: {filename} → {e}")
             count_fail += 1
 
     print(f"\n=== 업로드 요약 ===")
