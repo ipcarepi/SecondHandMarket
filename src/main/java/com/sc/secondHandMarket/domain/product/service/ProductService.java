@@ -1,18 +1,19 @@
 package com.sc.secondHandMarket.domain.product.service;
 
 import com.sc.secondHandMarket.domain.product.entity.Product;
-import com.sc.secondHandMarket.domain.product.entity.ProductRequestDto;
-import com.sc.secondHandMarket.domain.product.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.sc.secondHandMarket.domain.product.dto.request.ProductRequestDto;
 
-@Service
-@RequiredArgsConstructor
-public class ProductService {
+import java.util.List;
 
-    private final ProductRepository productRepository;
+public interface ProductService {
 
-    public Product saveProduct(ProductRequestDto dto) {
-        return productRepository.save(dto.toEntity());
-    }
+    List<Product> findAll();
+
+    Product findById(Long productId);
+
+    Product findByName(String productName);
+
+    Product saveProduct(ProductRequestDto dto);
+
+    Product deleteProduct(Long productId);
 }

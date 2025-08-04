@@ -1,8 +1,9 @@
-package com.sc.secondHandMarket.domain.product.entity;
+package com.sc.secondHandMarket.domain.product.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sc.secondHandMarket.domain.product.entity.Product;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
