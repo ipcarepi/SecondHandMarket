@@ -23,25 +23,29 @@ public class Product {
     private String name;
 //    private int brand_id;
     private String model_number;
-    private int release_price;
+    // private int release_price;
     private int current_price;
-    private int last_trade_price;
+    // private int last_trade_price;
     private String color;
     private String description;
     private String delivery_info;
+    private String imageUrl;
+    private int reviewCount;
     private LocalDateTime created_at;
 
-    public Product(String name, String model_number, int release_price,
-                   int current_price, int last_trade_price, String color,
-                   String description, String delivery_info) {
+    public Product(String name, String model_number, 
+                   int current_price, String color,
+                   String description, String delivery_info, String imageUrl, int reviewCount) {
         this.name = name;
         this.model_number = model_number;
-        this.release_price = release_price;
+        // this.release_price = release_price;
         this.current_price = current_price;
-        this.last_trade_price = last_trade_price;
+        // this.last_trade_price = last_trade_price;
         this.color = color;
         this.description = description;
         this.delivery_info = delivery_info;
+        this.imageUrl = imageUrl;
+        this.reviewCount = reviewCount;
         this.created_at = LocalDateTime.now();
     }
 }
