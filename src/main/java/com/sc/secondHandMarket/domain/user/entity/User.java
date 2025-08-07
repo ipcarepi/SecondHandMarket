@@ -19,16 +19,16 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    private String email;
-    private String password;
     private String nickname;
+    private String password;
+    private String email;
     private String phone;
     private LocalDateTime created_at;
 
-    public User(String email, String password, String nickname, String phone) {
-        this.email = email;
-        this.password = password;
+    public User(String nickname, String password, String email, String phone) {
         this.nickname = nickname;
+        this.password = password;
+        this.email = email;
         this.phone = phone;
         this.created_at = LocalDateTime.now();
     }
